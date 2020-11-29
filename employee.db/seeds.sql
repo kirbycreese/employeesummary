@@ -1,25 +1,12 @@
-DROP DATABASE IF EXISTS employees_db;
+INSERT INTO department (id, name) VALUES (1, 'beauty');
+INSERT INTO department (id, name) VALUES (2, 'electronics');
+INSERT INTO department (id, name) VALUES (3, 'apparel');
+INSERT INTO department (id, name) VALUES (4, 'starbucks');
 
-CREATE DATABASE employees_db;
+INSERT INTO role (id, title, salary, department_id) VALUES (1, 'beauty consultant', 15.00, 1)
+INSERT INTO role (id, title, salary, department_id) VALUES (2, 'tech consultant', 15.00, 2)
+INSERT INTO role (id, title, salary, department_id) VALUES (3, 'style consultant', 15.00, 3)
+INSERT INTO role (id, title, salary, department_id) VALUES (4, 'barista', 15.00, 4)
+INSERT INTO role (id, title, salary, department_id) VALUES (5, 'beauty team lead', 18.00, 1)
+INSERT INTO role (id, title, salary, department_id) VALUES (6, 'starbucks team lead' 18.00, 4)
 
-USE employees_db;
-
-CREATE TABLE department (
-  id INT PRIMARY KEY,
-  name VARCHAR(30)
-);
-
-CREATE TABLE role (
-	id INT PRIMARY KEY,
-    title VARCHAR(30),
-    salary DECIMAL,
-    department_id INT
-    );
-    
-    CREATE TABLE employee (
-		id INT PRIMARY KEY,
-        first_name VARCHAR(30),
-        last_name VARCHAR(30),
-        role_id INT,
-        manager_id INT 
-        );
